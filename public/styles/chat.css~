@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+body {
+    background: #e2e2e2;
+    color: #9a9a9a;
+    font: 120%/1.5em "Droid Sans", sans-serif;
+    margin: 0;
+}
+
+input {
+    border: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 5px;
+    line-height: normal;
+    margin: 0;
+}
+
+#wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 50%;
+}
+
+#chat-form {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#input {
+    height: 100px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+#chat-output {
+    list-style: none;
+    height: 500px;
+    overflow-y: auto;
+}
+
+#chat-output li {
+    position: relative;
+    clear: both;
+    padding: 16px 40px 16px 20px;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    background-color: rgba( 25, 147, 147, 0.2 );
+}
+
+#chat-output li:after {
+    position: absolute;
+    top: 15px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 15px solid rgba( 25, 147, 147, 0.2 );
+}

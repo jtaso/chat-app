@@ -1,0 +1,26 @@
+# Replace this sample with real code.
+class ChatController
+  # HTTP
+  def index
+    # any String returned will be appended to the response. We return a String.
+    render 'welcome'
+  end
+
+  # Websockets
+  def on_open
+    subscribe channel: "chat"
+
+    @handle = params['id'.freeze] || 'Anonymous'
+    publish channel: "chat", message: "#{ERB::Util.html_escape @handle} has joined"
+  end
+
+  def on_message(data)
+    data = ERB::Util.html_escape data
+    publish channel: "chat", message: "#{@handle} says: #{data}"
+  end
+
+  def on_close
+    publish channel: "chat", message: "#{@handle} has left"
+  end
+
+end

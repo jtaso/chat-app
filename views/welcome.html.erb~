@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Chat App</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=yes, minimal-ui=yes" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+    <link rel='stylesheet' href="/styles/chat.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id='wrapper'>
+        <div id='welcome'>
+            <h3> Welcome to the Chat! </h3>
+            <p>This application is powered by Ruby and utilizes WebSockets for real-time client-server communication</p>
+        </div>
+        <div id='name-input'>
+            <form id='name-form'>
+                <input id='name-input' name='name' type='text' placeholder='Enter your name...' required />
+            </form>
+        </div>
+        <div id='chat-app'>
+            <ul id='chat-output'></ul>
+            <form id='message-form'>
+                <input id='input' name='message' type='text' placeholder='Type your message...' />
+            </form>
+        </div>
+    </div>
+    <script src="/javascripts/chat.js" type='text/javascript'></script>
+</body>
